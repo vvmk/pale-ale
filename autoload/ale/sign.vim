@@ -33,7 +33,13 @@ if !hlexists('ALEStyleErrorSign')
 endif
 
 if !hlexists('ALEWarningSign')
+<<<<<<< HEAD
     highlight ALEWarningSign ctermbg=none
+||||||| parent of 136b5c43... Make default signs better and hard code some opinions
+    highlight link ALEWarningSign todo
+=======
+    highlight link ALEWarningSign ctermbg=none
+>>>>>>> 136b5c43... Make default signs better and hard code some opinions
 endif
 
 if !hlexists('ALEStyleWarningSign')

@@ -1,6 +1,7 @@
 scriptencoding utf8
 " Author: w0rp <devw0rp@gmail.com>
 " Description: Draws error and warning signs into signcolumn
+" Bastardized: couch vince
 
 " This flag can be set to some integer to control the maximum number of signs
 " that ALE will set.
@@ -9,9 +10,9 @@ let g:ale_max_signs = get(g:, 'ale_max_signs', -1)
 " there are errors.
 let g:ale_change_sign_column_color = get(g:, 'ale_change_sign_column_color', 0)
 " These variables dictate what signs are used to indicate errors and warnings.
-let g:ale_sign_error = get(g:, 'ale_sign_error', '>>')
+let g:ale_sign_error = get(g:, 'ale_sign_error', '🙊')
 let g:ale_sign_style_error = get(g:, 'ale_sign_style_error', g:ale_sign_error)
-let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
+let g:ale_sign_warning = get(g:, 'ale_sign_warning', '🙈')
 let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', g:ale_sign_warning)
 let g:ale_sign_info = get(g:, 'ale_sign_info', g:ale_sign_warning)
 " This variable sets an offset which can be set for sign IDs.
@@ -19,7 +20,7 @@ let g:ale_sign_info = get(g:, 'ale_sign_info', g:ale_sign_warning)
 " The dummy sign will use the ID exactly equal to the offset.
 let g:ale_sign_offset = get(g:, 'ale_sign_offset', 1000000)
 " This flag can be set to 1 to keep sign gutter always open
-let g:ale_sign_column_always = get(g:, 'ale_sign_column_always', 0)
+let g:ale_sign_column_always = get(g:, 'ale_sign_column_always', 1)
 
 if !hlexists('ALEErrorSign')
     highlight link ALEErrorSign ctermbg=none
@@ -30,7 +31,7 @@ if !hlexists('ALEStyleErrorSign')
 endif
 
 if !hlexists('ALEWarningSign')
-    highlight link ALEWarningSign todo
+    highlight link ALEWarningSign ctermbg=none
 endif
 
 if !hlexists('ALEStyleWarningSign')

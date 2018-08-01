@@ -22,7 +22,7 @@ let g:ale_sign_offset = get(g:, 'ale_sign_offset', 1000000)
 let g:ale_sign_column_always = get(g:, 'ale_sign_column_always', 0)
 
 if !hlexists('ALEErrorSign')
-    highlight link ALEErrorSign error
+    highlight link ALEErrorSign ctermbg=none
 endif
 
 if !hlexists('ALEStyleErrorSign')
@@ -42,7 +42,7 @@ if !hlexists('ALEInfoSign')
 endif
 
 if !hlexists('ALESignColumnWithErrors')
-    highlight link ALESignColumnWithErrors error
+    highlight ALESignColumnWithErrors ctermbg=none
 endif
 
 function! ale#sign#SetUpDefaultColumnWithoutErrorsHighlight() abort

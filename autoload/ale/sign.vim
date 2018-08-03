@@ -23,7 +23,7 @@ let g:ale_sign_offset = get(g:, 'ale_sign_offset', 1000000)
 let g:ale_sign_column_always = get(g:, 'ale_sign_column_always', 1)
 
 if !hlexists('ALEErrorSign')
-    highlight link ALEErrorSign ctermbg=none
+    highlight ALEErrorSign ctermbg=none
 endif
 
 if !hlexists('ALEStyleErrorSign')
@@ -31,7 +31,7 @@ if !hlexists('ALEStyleErrorSign')
 endif
 
 if !hlexists('ALEWarningSign')
-    highlight link ALEWarningSign ctermbg=none
+    highlight ALEWarningSign ctermbg=none
 endif
 
 if !hlexists('ALEStyleWarningSign')
